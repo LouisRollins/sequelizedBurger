@@ -1,0 +1,50 @@
+@font-face {
+    font-family: Burger-Font;
+    src: url(./Hemondalisa.ttf);
+  }
+.container{
+    background-color:red;
+}
+h1, button{
+    font-family: 'Burger-Font';
+    display: inline;
+}
+h1{
+    height: 125%;
+}
+.burger{
+    height: 140px;
+}
+.header{
+text-align: center;
+}
+
+h2{
+    font-family: 'Burger-Font', Times, serif;
+    text-align: center;
+}
+ul{
+    text-align: center;
+    background-position: 100%;
+    
+}
+.create-form{
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body > * {
+    flex-shrink: 0;
+  }
+  
+  .container { background-color: red; }
+  
+  .container {
+    flex-grow: 1;
+  }

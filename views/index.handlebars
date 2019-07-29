@@ -1,0 +1,67 @@
+<div class='container'>
+
+
+  <div class='row'>
+    <div class='col-md-12'>
+      <div class='header'>
+        <img class='burger' src='assets/img/87505_thumb.png'></img>
+        <h1>Burgers!</h1><img class='burger' src='assets/img/87505_thumb.png'></img>
+      </div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <div class='diningAreaLeft'>
+        <h2>Uneaten:</h2>
+
+        <ul>
+
+          {{#each burgers}}
+          {{#unless devoured}}
+          <li>
+            {{this.id}}
+            {{this.burger_name}}
+            <button class=devourButton data-type={{this.id}}>Devour!</button>
+          </li>
+          {{/unless}}
+          {{/each}}
+
+        </ul>
+      </div>
+    </div>
+    <div class='col-md-6'>
+      <div class='diningAreaRight'>
+        <h2>Already eaten:</h2>
+
+        <ul>
+          {{#each burgers}}
+          {{#if devoured}}
+          <li>
+            {{this.id}}
+            {{this.burger_name}}
+            <img src='assets/img/trash-can-icon-27.png' style='height:30px;'></img>
+          </li>
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class="col-md-12">
+      <h2>Add a Burger</h2>
+      <form class="create-form">
+
+        <div class="form-group">
+          <label for="burgerInput">Burger Name:</label>
+          <input type="text" id="burgerInput" name="name">
+        </div>
+
+        <button type="submit" id='submit'>Add Burger</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</div>
